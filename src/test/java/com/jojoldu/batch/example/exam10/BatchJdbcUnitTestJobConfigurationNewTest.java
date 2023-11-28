@@ -94,7 +94,7 @@ public class BatchJdbcUnitTestJobConfigurationNewTest {
     public static class TestDataSourceConfiguration {
 
         private static final String CREATE_SQL =
-                "create table IF NOT EXISTS `sales` (id bigint not null auto_increment, amount bigint not null, order_date date, order_no varchar(255), primary key (id)) engine=InnoDB;";
+                "create table IF NOT EXISTS `sales` (id bigint not null auto_increment, amount bigint not null, order_date date, order_no varchar(255), primary key (id));";
 
         @Bean
         public DataSource dataSource() {
