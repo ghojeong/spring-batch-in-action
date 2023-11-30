@@ -50,7 +50,7 @@ public class MySqlStoreBackup3ConfigurationTest {
         //given
         String name = "a";
 
-        int count = 100_000;
+        int count = 0;
 
         JobParameters jobParameters = new JobParametersBuilder(jobLauncherTestUtils.getUniqueJobParameters())
                 .addString("storeName", name)

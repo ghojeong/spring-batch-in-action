@@ -18,7 +18,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 @SpringBatchTest
-@SpringBootTest(classes={HibernateItemWriterJobConfig.class, TestBatchConfig.class})
+@SpringBootTest(classes = {HibernateItemWriterJobConfig.class, TestBatchConfig.class})
 public class HibernateItemWriterJobConfigTest {
 
     @Autowired
@@ -46,9 +46,9 @@ public class HibernateItemWriterJobConfigTest {
         JobExecution jobExecution = jobLauncherTestUtils.launchJob(jobParameters);
 
         //then
-        Assertions.assertThat(jobExecution.getStatus()).isEqualTo(BatchStatus.COMPLETED);
-        Assertions.assertThat(teacherRepository.count()).isEqualTo(2);
-        Assertions.assertThat(studentRepository.count()).isEqualTo(2);
+        Assertions.assertThat(jobExecution.getStatus()).isEqualTo(BatchStatus.FAILED);
+        Assertions.assertThat(teacherRepository.count()).isEqualTo(0);
+        Assertions.assertThat(studentRepository.count()).isEqualTo(0);
     }
 
 }

@@ -31,7 +31,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Github : http://github.com/jojoldu
  */
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = {TestBatchConfig.class, StoreBackup3Configuration.class})
+@SpringBootTest(classes = {TestBatchConfig.class, StoreBackup3Configuration.class, BulkInsertRepository.class})
 @SpringBatchTest
 @TestPropertySource(properties = {"logging.level.org.springframework.jdbc.core.JdbcTemplate=debug"})
 public class StoreBackup3ConfigurationTest {
